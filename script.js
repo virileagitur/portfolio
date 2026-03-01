@@ -125,6 +125,16 @@ heroSkills.forEach(bar => {
 });
 
 
+// Disable right-click
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Prevent image dragging
+document.querySelectorAll('img').forEach(img => {
+  img.setAttribute('draggable', false);
+});
+
 
 
 
