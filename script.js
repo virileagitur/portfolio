@@ -82,6 +82,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
 // Project card hover effect
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
