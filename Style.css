@@ -746,101 +746,10 @@ footer {
 }
 
 
-/* ============================================
-   MOBILE RESPONSIVE (Max-Width: 768px)
-============================================= */
+/* Add this to shift the image to show the person */
 @media (max-width: 768px) {
-
-  /* Hero */
-  .hero-left {
-    padding: 0 6%;
-    max-width: 100%;
-    padding-bottom: 80px; /* Space for the View Work button */
-  }
-
-  .hero-text h2 {
-    font-size: 32px;
-  }
-
-  .hero-text p {
-    font-size: 14px;
-    margin-bottom: 40px;
-  }
-  
-  /* Skills adjustment for mobile */
-  .skills-minimal {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 60px;
-  }
-
-  /* Mobile Navigation */
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 260px;
-    background: #ffffff;
-    flex-direction: column;
-    padding: 120px 30px;
-    gap: 30px;
-    transition: right 0.4s ease;
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .nav-links a {
-    margin: 0;
-    font-size: 16px;
-  }
-
-  /* Hide desktop header on mobile */
-  .desktop-header {
-    display: none;
-  }
-
-  /* Inner Page Mobile */
-  .inner-hero {
-    padding: 120px 6% 60px;
-    text-align: left;
-  }
-
-  .inner-hero h1 {
-    font-size: 36px;
-  }
-
-  .inner-hero p {
-    font-size: 16px;
-    text-align: left;
-  }
-
-  .inner-content {
-    padding: 40px 6% 80px;
-  }
-
-  .text-block {
-    font-size: 16px;
-    text-align: left;
-    margin-bottom: 40px;
-  }
-
-  .full-image {
-    margin-bottom: 50px;
-    width: 100%;
-  }
-
-  .image-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 60px;
+  .hero img {
+    object-position: 60% center !important; /* Shifts image to show right side/face */
+    height: 100vh; /* Full height so text floats over it */
   }
 }
