@@ -68,6 +68,8 @@ contactForm.addEventListener('submit', (e) => {
   }, 3000);
 });
 
+
+
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -80,6 +82,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
+});
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
 document.querySelectorAll('.nav-links a').forEach(link => {
