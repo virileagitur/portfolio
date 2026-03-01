@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <title>Project Title — Jino Guinang</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Calligraphy Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const elements = document.querySelectorAll(".inner-hero, .full-image, .text-block, .image-grid");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("aw-show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  elements.forEach(el => {
+    el.classList.add("aw-hidden");
+    observer.observe(el);
+  });
+
+});
+</script>
+
+
+
+<body class="inner-page">
+
+  <!-- Return Button -->
+  <a href="index.html" class="back-btn">
+  <span class="back-line"></span>
+  <span class="back-text">Back</span>
+</a>
+
+  <section class="inner-hero">
+    <h1>Project Title</h1>
+    <p>Short description of this project goes here.</p>
+  </section>
+
+   <section class="inner-content">
+
+   <!-- Random Large Hero Image -->
+   <img class="full-image"
+        src="https://source.unsplash.com/1600x900/?minimal,architecture"
+        alt="Random Architecture">
+
+   <div class="text-block">
+     <p>
+       This section is used to test typography, spacing, and visual rhythm.
+       The images below are dynamically generated for prototype purposes.
+     </p>
+   </div>
+
+   <!-- Random Image Grid -->
+   <div class="image-grid">
+     <img src="https://source.unsplash.com/800x900/?concrete,architecture">
+     <img src="https://source.unsplash.com/800x900/?modern,building">
+     <img src="https://source.unsplash.com/800x900/?interior,minimal">
+     <img src="https://source.unsplash.com/800x900/?stairs,architecture">
+   </div>
+
+   <!-- Another Random Full Image -->
+   <img class="full-image"
+        src="https://source.unsplash.com/1600x1000/?urban,architecture"
+        alt="Random Urban">
+
+  </section>
+
+ <script>
+ document.addEventListener("DOMContentLoaded", () => {
+   const elements = document.querySelectorAll(".inner-hero, .full-image, .text-block, .image-grid");
+   const observer = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) entry.target.classList.add("aw-show");
+     });
+   }, { threshold: 0.15 });
+
+   elements.forEach(el => {
+     el.classList.add("aw-hidden");
+     observer.observe(el);
+   });
+ });
+ </script>
+
+</body>
+</html>

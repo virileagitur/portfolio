@@ -91,3 +91,25 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.style.transform = 'translateY(0)';
   });
 });
+
+
+// Animate Hero Skills
+const heroSkills = document.querySelectorAll('.skill-fill');
+
+const heroSkillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bar = entry.target;
+      bar.style.width = bar.getAttribute('data-width');
+    }
+  });
+}, { threshold: 0.6 });
+
+heroSkills.forEach(bar => {
+  heroSkillObserver.observe(bar);
+});
+
+
+
+
+
